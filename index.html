@@ -469,4 +469,13 @@ function escHtml(str) {
   return str.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
 }
 
+// Init
+buildFilters();
+renderFonts();
+
+// Update preview on input
+document.getElementById("searchInput").addEventListener("input", updatePreview);
+</script>
+</body>
+</html>
 
