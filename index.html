@@ -1,1 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FontFeels</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Abril+Fatface&family=Alfa+Slab+One&family=Architects+Daughter&family=Bebas+Neue&family=Caveat:wght@400;700&family=Dancing+Script:wght@400;700&family=DM+Serif+Display:ital@0;1&family=Exo+2:ital,wght@0,200;1,200&family=Gochi+Hand&family=IBM+Plex+Mono:wght@300;400&family=Italiana&family=Josefin+Sans:wght@100;300&family=Libre+Baskerville:ital@0;1&family=Lobster&family=Monoton&family=Pacifico&family=Permanent+Marker&family=Playfair+Display:ital,wght@1,400;1,700&family=Raleway:wght@100;200&family=Righteous&family=Satisfy&family=Secular+One&family=Yeseva+One&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+:root {
+  --bg: #ffffff;
+  --ink: #0a0a0a;
+  --border: #e8e8e8;
+  --muted: #999;
+  --hover-bg: #f5f5f5;
+  --font-ui: 'Space Grotesk', sans-serif;
+}
+
+html, body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-ui);
+  min-height: 100vh;
+}
+
+/* HEADER */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 24px;
+  padding: 0 40px;
+  height: 64px;
+}
+
+.logo {
+  font-family: var(--font-ui);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.logo span { color: var(--muted); font-weight: 300; }
+
+.search-bar {
+  position: relative;
+  max-width: 480px;
+  width: 100%;
+}
+
+.search-bar input {
+  width: 100%;
+  border: 1.5px solid var(--border);
+  border-radius: 8px;
+  font-family: var(--font-ui);
+  font-size: 15px;
+  font-weight: 400;
+  padding: 10px 16px;
+  outline: none;
+  color: var(--ink);
+  background: var(--bg);
+  transition: border-color 0.2s;
+  letter-spacing: 0.01em;
+}
+
+.search-bar input:focus { border-color: var(--ink); }
+.search-bar input::placeholder { color: #ccc; }
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.size-control {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.size-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+input[type="range"] {
+  width: 100px;
+  accent-color: var(--ink);
+}
+
+.size-val {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ink);
+  min-width: 36px;
+}
+
+.copy-all-btn {
+  font-family: var(--font-ui);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 8px 18px;
+  border: 1.5px solid var(--ink);
+  background: var(--ink);
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.15s;
+  white-space: nowrap;
+}
+.copy-all-btn:hover { background: #fff; color: var(--ink); }
+
+
+</html>
